@@ -1,0 +1,10 @@
+{
+  "name": "high-order-components",
+  "version": "0.0.1",
+  "dependencies": {
+    "react": "15.3.2",
+    "react-native": "0.37.0",
+    "react-redux": "^4.4.6",
+    "redux": "^3.6.0"
+  }
+}
