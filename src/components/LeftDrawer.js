@@ -37,8 +37,8 @@ const LeftDrawer = (props) => {
     avatar: {
       div: {
         padding: '15px 0 20px 15px',
-        backgroundColor: blueGrey300,
-        backgroundImage:  'url(' + require('../common/assets/logo-01.png') + ')',
+        opacity: .7,
+        backgroundImage:  'url(' + require('../common/assets/h_perfil2.png') + '), linear-gradient(to left, #00c6ff , #0072ff)',
         width: 215,
         height: 45
       },
