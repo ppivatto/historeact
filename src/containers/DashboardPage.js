@@ -67,7 +67,7 @@ class DashboardPage extends React.Component {
     if(browserHistory.getCurrentLocation().pathname === '/') {
       return (
           <div>
-            HOLA
+            HOLA!!!
           </div>
       );
     }

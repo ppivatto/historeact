@@ -11,11 +11,9 @@ body, h1, h2, h3, h4, h5, h6 {
 
 body {
   margin: 0;
-  background: #757F9A;
-  background: -webkit-linear-gradient(to left, #757F9A , #D7DDE8);
-  background: linear-gradient(to left, #757F9A , #D7DDE8);
-
-
+  background: #75AADB;
+  background: -webkit-linear-gradient(to left, #75AADB , #9fc8ee);
+  background: linear-gradient(to left, #75AADB , #9fc8ee);
 }
 
 body, html, #app, #app > div{
