@@ -28,7 +28,13 @@ const LeftDrawer = (props) => {
       color: '#fcc55b',
       fontWeight: 'bold',
       fontFamily: 'Dancing Script, cursive',
-      fontSize: 16
+      fontSize: '0.9rem',
+      marginLeft: 0,
+      padding: '0px 10px 0px 0',
+    },
+
+    containerMenuItem: {
+
     },
     drawerContainer: {
       background: 'linear-gradient(to right, #408ed6 , #66a4de)',
@@ -69,11 +75,12 @@ const LeftDrawer = (props) => {
       </div>
       <div style={styles.avatar.div}>
       </div>
-      <div>
+      <div style={styles.containerMenuItem}>
         {props.menus.map((menu, index) =>
             <MenuItem
                 key={index}
                 style={styles.menuItem}
+                containerStyle={styles.containerMenuItem}
                 primaryText={menu.text}
                 leftIcon={menu.icon}
                 containerElement={<Link to={menu.link}/>}

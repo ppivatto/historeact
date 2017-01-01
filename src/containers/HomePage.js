@@ -5,10 +5,11 @@ import LeftDrawer from '../components/LeftDrawer';
 import withWidth, {LARGE, SMALL} from 'material-ui/utils/withWidth';
 import ThemeDefault from '../theme-default';
 import Data from '../data';
+import {Table, TableBody, TableHeader, TableHeaderColumn, TableRow, TableRowColumn} from 'material-ui/Table';
 
 import { browserHistory } from 'react-router';
 
-class DashboardPage extends React.Component {
+class HomePage extends React.Component {
 
   constructor(props) {
     super(props);
@@ -39,6 +40,9 @@ class DashboardPage extends React.Component {
       header: {
         paddingLeft: navDrawerOpen ? paddingLeftDrawerOpen : 0
       },
+      drawer: {
+        backgroundColor: 'red'
+      },
       container: {
         margin: '80px 20px 20px 15px',
         paddingLeft: navDrawerOpen && this.props.width !== SMALL ? paddingLeftDrawerOpen : 0
@@ -51,9 +55,10 @@ class DashboardPage extends React.Component {
           <Header styles={styles.header}
                   handleChangeRequestNavDrawer={this.handleChangeRequestNavDrawer.bind(this)}/>
 
-            <LeftDrawer navDrawerOpen={navDrawerOpen}
-                        menus={Data.menus}
-                        username="User Admin"/>
+            <LeftDrawer containerStyle={styles.drawer}
+                        style={styles.drawer}
+                        navDrawerOpen={navDrawerOpen}
+                        menus={Data.menus}/>
 
             <div style={styles.container}>
               {this.getRender()}
@@ -67,7 +72,37 @@ class DashboardPage extends React.Component {
     if(browserHistory.getCurrentLocation().pathname === '/') {
       return (
           <div>
-            HOLA!!!
+            <Table>
+              <TableHeader>
+                <TableRow>
+                  <TableHeaderColumn>ID</TableHeaderColumn>
+                  <TableHeaderColumn>Name</TableHeaderColumn>
+                  <TableHeaderColumn>Status</TableHeaderColumn>
+                </TableRow>
+              </TableHeader>
+              <TableBody>
+                <TableRow>
+                  <TableRowColumn>1</TableRowColumn>
+                  <TableRowColumn>John Smith</TableRowColumn>
+                  <TableRowColumn>Employed</TableRowColumn>
+                </TableRow>
+                <TableRow>
+                  <TableRowColumn>2</TableRowColumn>
+                  <TableRowColumn>Randal White</TableRowColumn>
+                  <TableRowColumn>Unemployed</TableRowColumn>
+                </TableRow>
+                <TableRow>
+                  <TableRowColumn>3</TableRowColumn>
+                  <TableRowColumn>Stephanie Sanders</TableRowColumn>
+                  <TableRowColumn>Employed</TableRowColumn>
+                </TableRow>
+                <TableRow>
+                  <TableRowColumn>4</TableRowColumn>
+                  <TableRowColumn>Steve Brown</TableRowColumn>
+                  <TableRowColumn>Employed</TableRowColumn>
+                </TableRow>
+              </TableBody>
+            </Table>
           </div>
       );
     }
@@ -75,9 +110,9 @@ class DashboardPage extends React.Component {
   }
 }
 
-DashboardPage.propTypes = {
+HomePage.propTypes = {
   children: PropTypes.element,
   width: PropTypes.number
 };
 
-export default withWidth()(DashboardPage);
+export default withWidth()(HomePage);

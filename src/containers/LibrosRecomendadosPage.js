@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 //import TextField from 'material-ui/TextField';
 
-class CambiarPassword extends Component {
+class LibrosRecomendados extends Component {
 
     /*constructor(props) {
         super(props);
@@ -12,7 +12,7 @@ class CambiarPassword extends Component {
 
         return (
             <div className="cambiarPasswordContainer">
-                Cambiar Password Page
+                LibrosRecomendados Page
             </div>
         );
     }
@@ -20,4 +20,4 @@ class CambiarPassword extends Component {
 
 }
 
-export default CambiarPassword;
+export default LibrosRecomendados;

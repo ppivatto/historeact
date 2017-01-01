@@ -2,24 +2,22 @@ import React from 'react';
 import { Route/*, IndexRoute*/ } from 'react-router';
 //import NotFoundPage from './containers/NotFoundPage.js';
 import LoginPage from './containers/LoginPage';
-import DetailWorkPage from './containers/DetailWorkPage';
-import ManageWorkPage from './containers/ManageWorkPage';
-import GalleryPage from './containers/GalleryPage';
-import WorkMessagePage from './containers/WorkMessagePage';
-import Dashboard from './containers/DashboardPage';
-import ManageUserPage from './containers/ManageUserPage';
-import CambiarPassword from './containers/CambiarPasswordPage';
+import SucesosPage from './containers/SucesosPage';
+import DocumentosPage from './containers/DocumentosPage';
+import ContactoPage from './containers/ContactoPage';
+import Home from './containers/HomePage';
+import BiografiasPage from './containers/BiografiasPage';
+import LibrosRecomendados from './containers/LibrosRecomendadosPage';
 
 export default (
     <Route>
         <Route path="login" component={LoginPage}/>
-        <Route path="/" component={Dashboard}>
-            <Route path="manageWork" component={ManageWorkPage}/>
-            <Route path="detailWorkPage" component={DetailWorkPage}/>
-            <Route path="cambiarPassword" component={CambiarPassword}/>
-            <Route path="gallery" component={GalleryPage}/>
-            <Route path="workMessage" component={WorkMessagePage}/>
-            <Route path="manageUser" component={ManageUserPage}/>
+        <Route path="/" component={Home}>
+            <Route path="sucesos" component={SucesosPage}/>
+            <Route path="librosRecomendados" component={LibrosRecomendados}/>
+            <Route path="biografias" component={BiografiasPage}/>
+            <Route path="documentos" component={DocumentosPage}/>
+            <Route path="contacto" component={ContactoPage}/>
         </Route>
     </Route>
 );

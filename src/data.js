@@ -11,9 +11,11 @@ import ChevronRight from 'material-ui/svg-icons/navigation/chevron-right';
 const data = {
   menus: [
     { text: 'Inicio', icon: <Home/>, link: '/' },
-    { text: 'Obras', icon: <Setting/>, link: '/manageWork' },
-    { text: 'Usuarios', icon: <User/>, link: '/manageUser' },
-    { text: 'Cambiar Contraseña', icon: <CambiarPassword/>, link: '/cambiarPassword' }
+    { text: 'Sucesos', icon: <Setting/>, link: '/sucesos' },
+    { text: 'Biografias', icon: <User/>, link: '/biografias' },
+    { text: 'Libros Recomendados', icon: <CambiarPassword/>, link: '/librosRecomendados' },
+    { text: 'Documentos', icon: <CambiarPassword/>, link: '/documentos' },
+    { text: 'Contacto', icon: <CambiarPassword/>, link: '/contacto' },
   ],
   tablePage: {
     items: [

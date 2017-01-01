@@ -12,7 +12,7 @@ import React, { Component } from 'react';
   },
 };*/
 
-class ManageWorkPage extends Component {
+class ContactoPage extends Component {
 
   /*constructor(props, context) {
       super(props, context);
@@ -22,11 +22,11 @@ class ManageWorkPage extends Component {
   render() {
     return (
       <div>
-        ManageWork Page
+        ContactoPage
       </div>
     );
   }
 }
 
 
-export default ManageWorkPage;
+export default ContactoPage;
