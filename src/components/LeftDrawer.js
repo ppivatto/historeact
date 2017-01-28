@@ -1,10 +1,9 @@
 import React,  { PropTypes } from 'react';
 import Drawer from 'material-ui/Drawer';
 import {spacing, typography} from 'material-ui/styles';
-import {white, blue600, blueGrey300} from 'material-ui/styles/colors';
+import {white, blue600} from 'material-ui/styles/colors';
 import MenuItem from 'material-ui/MenuItem';
 import {Link} from 'react-router';
-import Avatar from 'material-ui/Avatar';
 
 const LeftDrawer = (props) => {
   let { navDrawerOpen } = props;
@@ -57,7 +56,7 @@ const LeftDrawer = (props) => {
       span: {
         paddingTop: 35,
         display: 'block',
-        color: 'white',
+        color: white,
         fontWeight: 600,
         textShadow: '1px 1px #444'
       }
@@ -80,7 +79,6 @@ const LeftDrawer = (props) => {
             <MenuItem
                 key={index}
                 style={styles.menuItem}
-                containerStyle={styles.containerMenuItem}
                 primaryText={menu.text}
                 leftIcon={menu.icon}
                 containerElement={<Link to={menu.link}/>}

@@ -5,9 +5,33 @@ import LeftDrawer from '../components/LeftDrawer';
 import withWidth, {LARGE, SMALL} from 'material-ui/utils/withWidth';
 import ThemeDefault from '../theme-default';
 import Data from '../data';
-import {Table, TableBody, TableHeader, TableHeaderColumn, TableRow, TableRowColumn} from 'material-ui/Table';
+import SliderHistory from '../components/sliderHistory';
 
 import { browserHistory } from 'react-router';
+
+const styles = {
+  container: {
+    // margin: '0 auto',
+    // padding: '2rem',
+    // width: '100%',
+    // height: '30rem',
+    // background: '#419be0',
+  },
+  sliderDiv: {
+    width: '70%',
+    // display: 'flex !important',
+    // alignSelf: 'center',
+    // flexDirection: 'column !important',
+    // alignItems: 'center !important',
+    // marginTop: 0,
+    // marginBottom: 0,
+  },
+  sliderImg: {
+    // position: 'relative',
+    // height: '20rem',
+    // maxWidth: '70%',
+  },
+};
 
 class HomePage extends React.Component {
 
@@ -55,7 +79,7 @@ class HomePage extends React.Component {
           <Header styles={styles.header}
                   handleChangeRequestNavDrawer={this.handleChangeRequestNavDrawer.bind(this)}/>
 
-            <LeftDrawer containerStyle={styles.drawer}
+            <LeftDrawer
                         style={styles.drawer}
                         navDrawerOpen={navDrawerOpen}
                         menus={Data.menus}/>
@@ -70,39 +94,10 @@ class HomePage extends React.Component {
 
   getRender() {
     if(browserHistory.getCurrentLocation().pathname === '/') {
+
       return (
           <div>
-            <Table>
-              <TableHeader>
-                <TableRow>
-                  <TableHeaderColumn>ID</TableHeaderColumn>
-                  <TableHeaderColumn>Name</TableHeaderColumn>
-                  <TableHeaderColumn>Status</TableHeaderColumn>
-                </TableRow>
-              </TableHeader>
-              <TableBody>
-                <TableRow>
-                  <TableRowColumn>1</TableRowColumn>
-                  <TableRowColumn>John Smith</TableRowColumn>
-                  <TableRowColumn>Employed</TableRowColumn>
-                </TableRow>
-                <TableRow>
-                  <TableRowColumn>2</TableRowColumn>
-                  <TableRowColumn>Randal White</TableRowColumn>
-                  <TableRowColumn>Unemployed</TableRowColumn>
-                </TableRow>
-                <TableRow>
-                  <TableRowColumn>3</TableRowColumn>
-                  <TableRowColumn>Stephanie Sanders</TableRowColumn>
-                  <TableRowColumn>Employed</TableRowColumn>
-                </TableRow>
-                <TableRow>
-                  <TableRowColumn>4</TableRowColumn>
-                  <TableRowColumn>Steve Brown</TableRowColumn>
-                  <TableRowColumn>Employed</TableRowColumn>
-                </TableRow>
-              </TableBody>
-            </Table>
+            <SliderHistory style={{width: '100%'}}/>
           </div>
       );
     }

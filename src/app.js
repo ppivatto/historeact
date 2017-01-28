@@ -38,7 +38,7 @@ class App extends Component {
           messagingSenderId: "1091820485364"
       };
 
-        APIFirebase.init(config);
+     //   APIFirebase.init(config);
     }
 
     render() {
