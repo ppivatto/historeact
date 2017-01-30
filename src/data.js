@@ -1,8 +1,10 @@
 import React from 'react';
 import Home from 'material-ui/svg-icons/action/home';
-import Setting from 'material-ui/svg-icons/action/perm-data-setting';
+import Sucesos from 'material-ui/svg-icons/action/hourglass-empty';
 import User from 'material-ui/svg-icons/action/perm-identity';
-import CambiarPassword from 'material-ui/svg-icons/action/compare-arrows';
+import Description from 'material-ui/svg-icons/action/description';
+import Note from 'material-ui/svg-icons/av/note';
+import Contact from 'material-ui/svg-icons/communication/contact-mail';
 import {cyan600, pink600, purple600} from 'material-ui/styles/colors';
 import ExpandLess from 'material-ui/svg-icons/navigation/expand-less';
 import ExpandMore from 'material-ui/svg-icons/navigation/expand-more';
@@ -10,12 +12,12 @@ import ChevronRight from 'material-ui/svg-icons/navigation/chevron-right';
 
 const data = {
   menus: [
-    { text: 'Inicio', icon: <Home/>, link: '/' },
-    { text: 'Sucesos', icon: <Setting/>, link: '/sucesos' },
-    { text: 'Biografias', icon: <User/>, link: '/biografias' },
-    { text: 'Libros Recomendados', icon: <CambiarPassword/>, link: '/librosRecomendados' },
-    { text: 'Documentos', icon: <CambiarPassword/>, link: '/documentos' },
-    { text: 'Contacto', icon: <CambiarPassword/>, link: '/contacto' },
+    { text: 'Inicio', icon: <Home color='#FCC55B' />, link: '/' },
+    { text: 'Sucesos', icon: <Sucesos color='#FCC55B' />, link: '/sucesos' },
+    { text: 'Biografias', icon: <User color='#FCC55B' />, link: '/biografias' },
+    { text: 'Libros Recomendados', icon: <Description color='#FCC55B' />, link: '/librosRecomendados' },
+    { text: 'Documentos', icon: <Note color='#FCC55B' />, link: '/documentos' },
+    { text: 'Contacto', icon: <Contact color='#FCC55B' />, link: '/contacto' },
   ],
   tablePage: {
     items: [

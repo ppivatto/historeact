@@ -20,6 +20,14 @@ body, html, #app, #app > div{
   height: 92%;
 }
 
+.article {
+  color: #0c2a4d;
+}
+
+.article:hover {
+  color: #0c2a4d;
+}
+
 a {
   color: #ff4081;
   text-decoration: none;

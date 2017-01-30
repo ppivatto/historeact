@@ -12,7 +12,7 @@ import React, {Component} from "react";
 import { Router, browserHistory } from 'react-router';
 import routes from './routes';
 
-import {APIFirebase} from './common/API';
+//import {APIFirebase} from './common/API';
 
 class App extends Component {
 
@@ -27,7 +27,7 @@ class App extends Component {
         this.backButton = this.backButton.bind(this);
     }
 
-    componentDidMount() {
+    /*componentDidMount() {
         //TODO: SACAR KEYS A UN ARCHIVO DE CONFIGURACION
 
         let config = {
@@ -39,7 +39,7 @@ class App extends Component {
       };
 
      //   APIFirebase.init(config);
-    }
+    }*/
 
     render() {
         return (

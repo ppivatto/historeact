@@ -6,10 +6,65 @@ import withWidth, {LARGE, SMALL} from 'material-ui/utils/withWidth';
 import ThemeDefault from '../theme-default';
 import Data from '../data';
 import SliderHistory from '../components/sliderHistory';
+import Article from '../components/article';
 
 import { browserHistory } from 'react-router';
 
 const styles = {
+  mainContainer: {
+    display: 'flex',
+    flex: 1,
+    justifyContent: 'center',
+  },
+  atajosLeft: {
+    display: 'flex',
+    flex: 1,
+    flexDirection: 'column',
+    justifyContent: 'center',
+    marginRight: 5,
+  },
+  sliderCont: {
+  },
+  atajosRight: {
+    display: 'flex',
+    flex: 1,
+    flexDirection: 'column',
+    justifyContent: 'center',
+    marginLeft: 5,
+  },
+  atajosLeftTop: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    flex: 1,
+    textAlign: 'center',
+  },
+  atajosLeftBottom: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    flex: 1,
+    textAlign: 'center',
+  },
+  slider: {
+    width: '60%',
+  },
+  atajosRightTop: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    flex: 1,
+    textAlign: 'center',
+  },
+  atajosRightBottom: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    flex: 1,
+    textAlign: 'center',
+  },
+
+
   container: {
     // margin: '0 auto',
     // padding: '2rem',
@@ -17,6 +72,12 @@ const styles = {
     // height: '30rem',
     // background: '#419be0',
   },
+
+   atajos: {
+     margin: 10,
+     backgroundColor: 'red',
+   },
+
   sliderDiv: {
     width: '70%',
     // display: 'flex !important',
@@ -96,8 +157,28 @@ class HomePage extends React.Component {
     if(browserHistory.getCurrentLocation().pathname === '/') {
 
       return (
-          <div>
-            <SliderHistory style={{width: '100%'}}/>
+          <div style={styles.mainContainer}>
+            <div style={styles.atajosLeft}>
+              <div style={styles.atajosLeftTop}>
+                <Article artProps={'1'}/>
+              </div>
+              <div style={styles.atajosLeftBottom}>
+                <Article artProps={'2'}/>
+              </div>
+            </div>
+
+            <div style={styles.sliderCont}>
+              <SliderHistory style={styles.slider}/>
+            </div>
+
+            <div style={styles.atajosRight}>
+              <div style={styles.atajosRightTop}>
+                <Article artProps={'3'} />
+              </div>
+              <div style={styles.atajosRightBottom}>
+                <Article artProps={'4'} />
+              </div>
+            </div>
           </div>
       );
     }

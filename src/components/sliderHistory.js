@@ -1,9 +1,9 @@
 import React from 'react';
-import styles from './styles.css';
-import img1 from '../common/assets/avatarAdmin.png';
-import img2 from '../common/assets/avatarAdmin.png';
-import img3 from '../common/assets/avatarAdmin.png';
-import img4 from '../common/assets/avatarAdmin.png';
+import './styles.css';
+import sliderImg1 from '../common/assets/22-de-mayo.jpg';
+import sliderImg2 from '../common/assets/el-cabildo-abierto-de-buenos-aires.jpg';
+import sliderImg3 from '../common/assets/san_martin.jpg';
+//import img4 from '../common/assets/avatarAdmin.png';
 import ImageGallery from 'react-image-gallery';
 import "../../node_modules/react-image-gallery/styles/css/image-gallery.css";
 
@@ -18,16 +18,19 @@ class SliderHistory extends React.Component {
 
         const images = [
             {
-                original: 'http://historiarg.com.ar/img/25-de-mayo.jpg',
-                thumbnail: 'http://lorempixel.com/250/150/nature/1/',
+                original: sliderImg1,
+                thumbnail: sliderImg1,
+                description: 'Reviví el Primer Gobierno Patrio'
             },
             {
-                original: 'http://lorempixel.com/500/300/nature/2/',
-                thumbnail: 'http://lorempixel.com/250/150/nature/2/'
+                original: sliderImg2,
+                thumbnail: sliderImg2,
+                description: 'Cabildo Abierto de Buenos Aires'
             },
             {
-                original: 'http://lorempixel.com/500/300/nature/3/',
-                thumbnail: 'http://lorempixel.com/250/150/nature/3/'
+                original: sliderImg3,
+                thumbnail: sliderImg3,
+                description: 'La biografía de San Martín y otros próceres'
             }
         ];
 

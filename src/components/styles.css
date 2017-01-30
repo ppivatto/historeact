@@ -16,10 +16,14 @@
 
 .image-gallery-slide img {
     display: block;
-    height: 440px;
+    height: 300px;
     margin: 0 auto;
-    width: auto !important;
+    width: 550px !important;
     max-width: 800px;
+}
+
+.article a:hover{
+    color: yellow;
 }
 
 .image-gallery-bullets {

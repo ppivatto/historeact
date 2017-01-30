@@ -1,11 +1,10 @@
 import React from 'react';
 import {Link} from 'react-router';
-import {grey500} from 'material-ui/styles/colors';
 import PageBase from '../components/PageBase';
 
 const TablePage = () => {
 
-  const styles = {
+ /* const styles = {
     floatingActionButton: {
       margin: 0,
       top: 'auto',
@@ -35,7 +34,7 @@ const TablePage = () => {
       }
     }
   };
-
+*/
   return (
     <PageBase title="Table Page"
               navigation="">
